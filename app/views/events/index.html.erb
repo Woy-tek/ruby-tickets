@@ -4,4 +4,6 @@
         <li> <%=link_to event.artist, event%> </li>
     <% end %>
 </ul>
-<%=link_to 'Nowe ogłoszenie', new_event_path %>
+<%=link_to 'Nowe ogłoszenie', new_event_path, :class => "btn btn-warning" %>
+<br>
+<a href="/index.html" class="btn btn-primary">Strona główna</a>

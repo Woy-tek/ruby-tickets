@@ -29,4 +29,4 @@
 
 <%=render "new_ticket", ticket: Ticket.new( :event_id => @event.id) %>
 
-<%= link_to 'Back to events', events_path %>
+<%= link_to 'Back to events', events_path, :class => "btn btn-warning" %>
