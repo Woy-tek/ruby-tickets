@@ -35,5 +35,7 @@
   <%= @ticket.event_id %>
 </p>
 
-<%= link_to 'Edit', edit_ticket_path(@ticket), :class => "btn btn-primary" %> <br>
-<%= link_to 'Back', tickets_path, :class => "btn btn-warning" %>
+<% if @ticket.user == current_user %>
+<%= link_to 'Edytuj', edit_ticket_path(@ticket), :class => "btn btn-primary" %> <br>
+<% end %>
+<%= link_to 'Wstecz', tickets_path, :class => "btn btn-warning" %>

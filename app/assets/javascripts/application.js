@@ -16,4 +16,5 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require "my_script.js"
 //= require_tree .

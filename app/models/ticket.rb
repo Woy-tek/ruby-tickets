@@ -15,4 +15,5 @@ class Ticket < ApplicationRecord
     validates :price, :presence => true
     validates :phone, :length => { :minimum=> 9}, numericality: { only_integers: true}
     belongs_to :event
+    belongs_to :user
 end
