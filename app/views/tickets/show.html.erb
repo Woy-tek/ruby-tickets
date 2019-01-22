@@ -1,41 +1,31 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<dl class="dl-horizontal">
 
-<p>
-  <strong>Name:</strong>
-  <%= @ticket.name %>
-</p>
+  <dt><strong>Name:</strong> </dt>
+  <dd><%= @ticket.name %> </dd>
 
-<p>
-  <strong>Seat id seq:</strong>
-  <%= @ticket.seat_id_seq %>
-</p>
+  <dt><strong>Seat id seq:</strong> </dt>
+  <dd><%= @ticket.seat_id_seq %> </dd>
 
-<p>
-  <strong>Address:</strong>
-  <%= @ticket.address %>
-</p>
+  <dt><strong>Address:</strong> </dt>
+  <dd><%= @ticket.address %> </dd>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @ticket.phone %>
-</p>
+  <dt><strong>Phone:</strong> </dt>
+  <dd><%= @ticket.phone %> </dd>
 
-<p>
-  <strong>Price:</strong>
-  <%= @ticket.price %>
-</p>
+  <dt><strong>Price:</strong> </dt>
+  <dd><%= @ticket.price %> </dd>
 
-<p>
-  <strong>Email address:</strong>
-  <%= @ticket.email_address %>
-</p>
-
-<p>
-  <strong>Event:</strong>
-  <%= @ticket.event_id %>
-</p>
+  <dt><strong>Email address:</strong> </dt>
+  <dd><%= @ticket.email_address %> </dd>
+  
+  <dt><strong>Event:</strong> </dt>
+  <dd><%= @ticket.event_id %> </dd>
+</dl>
 
 <% if @ticket.user == current_user %>
 <%= link_to 'Edytuj', edit_ticket_path(@ticket), :class => "btn btn-primary" %> <br>
 <% end %>
 <%= link_to 'Wstecz', tickets_path, :class => "btn btn-warning" %>
+</div>

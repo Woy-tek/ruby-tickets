@@ -1,32 +1,28 @@
 <p id="komunikat"><%= flash[:komunikat] %> </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @event.artist %>
-</p>
+<div class="container">
+<dl class="dl-horizontal">
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+  <dt> <strong>Artist:</strong> </dt>
+  <dd> <%= @event.artist %> </dd>
 
-<p>
-  <strong>Price Low:</strong>
-  <%= @event.price_low %>
-</p>
+  <dt> <strong>Description:</strong> </dt>
+  <dd> <%= @event.description %> </dd>
 
-<p>
-  <strong>Price High:</strong>
-  <%= @event.price_high  %>
-</p>
+  <dt> <strong>Price Low:</strong> </dt>
+  <dd> <%= @event.price_low %> </dd>
 
-<p>
-  <strong>Event date:</strong>
-  <%= @event.event_date %>
-</p>
+  <dt> <strong>Price High:</strong> </dt>
+  <dd> <%= @event.price_high  %> </dd>
+
+  <dt> <strong>Event date:</strong> </dt>
+  <dd> <%= @event.event_date %> </dd>
+</dl>
 
 <%=render "tickets_list", tickets: @event.tickets %>
 
 <%=render "new_ticket", ticket: Ticket.new( :event_id => @event.id) %>
 
 <%= link_to 'Back to events', events_path, :class => "btn btn-warning" %>
+
+</div>
